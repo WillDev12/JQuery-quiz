@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+
+:root {
+  --bg: #303f9f;
+  --default-font: 'Outfit', sans-serif;
+  --border-red: #530D18;
+  --red: #771322;
+  --border-yellow: #75400F;
+  --yellow: #A85C15;
+  --border-green: #094B24;
+  --green: #0D6B33;
+  --border-blue: #05466A;
+  --blue: #076296;
+}
+
+* {
+  font-family: var(--default-font);
+  text-align: center;
+  color: black;
+}
+
+html, body {
+  margin: 0;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.ans {
+  flex: auto 1.5;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+.top {
+  flex: auto 1;
+  background-color: var(--bg);
+  font-size: 2rem;
+}
+
+.col {
+  flex: auto 1;
+  display: flex;
+}
+
+.col div {
+  border: solid 5px;
+  flex: auto 1;
+  transition: all 0.2s;
+  flex-basis: 50%;
+  font-size: 1.3rem;
+}
+
+.col div:hover {
+  opacity: 0.95;
+}
+
+div[name="red"] {
+  border-color: var(--border-red);
+  background-color: var(--red);
+}
+
+div[name="yellow"] {
+  border-color: var(--border-yellow);
+  background-color: var(--yellow);
+}
+
+div[name="green"] {
+  border-color: var(--border-green);
+  background-color: var(--green);
+}
+
+div[name="blue"] {
+  border-color: var(--border-blue);
+  background-color: var(--blue);
+}
+
+.top, .col div {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hidden {
+  display: none;
+}
+
+#query div {
+  color: white;
+  font-size: 3rem;
+}
+
+#result div, #query div {
+  display: flex;
+  flex-direction: column;
+  flex: auto 1;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+#result div {
+  background-color: var(--bg);
+  user-select: none;
+}
+
+.rcol {
+  background-color: white!important;
+  flex: none!important;
+  width: 60%;
+  border-radius: 0.6rem;
+  padding: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+div[name="top"] {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+div[name="percent"], div[name="bottom"] {
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+div[name="bottom"] button {
+  font-size: 1.35rem;
+  background-color: blue;
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 0.25rem;
+}
+
+div[name="bottom"] button:hover {
+  color: rgba(255,255,255,0.8);
+}
+
+div[name="bottom"] button:active {
+  color: gray;
+}
